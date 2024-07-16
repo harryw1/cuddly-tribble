@@ -1,27 +1,43 @@
-.img{
-    height: 150px;
-  }
-  
-  .description{
-    font-size: 20px;
-  }
-  
-  #cook-time{
-    font-weight: bold;
-  }
-  
-  .ingredients li{
-    list-style: square;
-  }
-  
-  p.time{
-    color: gray;
-  }
-  
-  a.external-link{
-    color: SeaGreen;
-  }
-  
-  *{
-    font-family: Helvetica !important;
-  }
+/**
+ * CSS styles for a recipe website.
+ * 
+ * FILEPATH: /Users/harrisonweiss/Library/Mobile Documents/com~apple~CloudDocs/git/cuddly-tribble/css-practice.css
+ * 
+ * This CSS file contains styles for various elements on a recipe website.
+ * 
+ * Styles:
+ * - .img: Sets the height of the image to 150px.
+ * - .description: Sets the font size of the description to 20px.
+ * - #cook-time: Sets the font weight of the cook-time element to bold.
+ * - .ingredients li: Sets the list style of the list items within the .ingredients class to square.
+ * - p.time: Sets the color of paragraphs with the class .time to gray.
+ * - a.external-link: Sets the color of anchor tags with the class .external-link to SeaGreen.
+ * - *: Sets the font family of all elements to Helvetica, with !important to override any other styles.
+ */
+.img {
+  height: 150px;
+}
+
+.description {
+  font-size: 20px;
+}
+
+#cook-time {
+  font-weight: bold;
+}
+
+.ingredients li {
+  list-style: square;
+}
+
+p.time {
+  color: gray;
+}
+
+a.external-link {
+  color: SeaGreen;
+}
+
+* {
+  font-family: Helvetica !important;
+}

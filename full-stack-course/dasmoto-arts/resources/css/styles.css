@@ -1,6 +1,34 @@
-/* Add your custom styles below */
+* {
+  font-family: Helvetica;
+}
 
-h1{
-    font-size: 100px;
-    color: khaki;
+h1 {
+  font-size: 100px;
+  font-weight: bold;
+  color: khaki;
+  text-align: center;
+  background-image: url("/resources/image-1.jpeg");
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+#Brushes {
+  background-color: mediumspringgreen;
+}
+
+#price {
+  font-weight: bold;
+  color: blue;
+}
+
+#Frames {
+  background-color: lightcoral;
+}
+
+#Paint {
+  background-color: lightblue;
 }

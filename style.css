@@ -1,496 +1,230 @@
-/* Universal Styles */
-
-html {
-  font-size: 16px;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-strong {
-  font-weight: bold;
-}
-
-.image-container {
-  overflow: hidden;
-}
-
-.image-container img {
-  display: block;
-  max-width: 100%;
-}
-
-@media only screen and (max-width: 990px) {
+@font-face{
+    font-family: 'Croissant One';
+    src: url('/styles/fonts/CroissantOne-Regular') format('truetype');
+  }
+  
   html {
-    font-size: 14px;
+    font-size: 18px;
   }
-}
-
-/* Header */
-
-header {
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 3.75rem;
-  background-color: #ff8000;
-}
-
-header .logo-small {
-  display: none;
-}
-
-header .logo-small,
-header .logo-big {
-  flex-grow: 1;
-}
-
-nav li {
-  display: inline;
-  padding-right: 2rem;
-}
-
-nav li:last-child {
-  padding-right: 0;
-}
-
-@media only screen and (max-width: 990px) {
-  header .logo-big {
-    display: none;
+  
+  @media only screen and (max-width: 1000px) {
+    html {
+      font-size: 16px;
+    }
   }
-
-  header .logo-small {
+  
+  @media only screen and (max-width: 680px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  
+  /* Header */
+  
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4.44rem;
+    padding: 0 12%;
+    background-color: white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+    font-family: Verdana, sans-serif;
+    font-size: .77rem;
+    font-weight: bold;
+  }
+  
+  .header .logo {
+    flex-grow: 1;
+    color: #ffb78c;
+  }
+  
+  .header li {
+    display: inline;
+    padding-right: 2.22rem;
+  }
+  
+  .header li a {
+    text-decoration: none;
+    color: #4a4a4a;
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .header {
+      flex-direction: column;
+    }
+  
+    .header .logo {
+      flex-grow: 0;
+    }
+  }
+  
+  /* Banner */
+  
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+    background: url("https://content.codecademy.com/courses/freelance-1/unit-6/project-morocco/banner.jpg") center center no-repeat;
+    background-size: cover;
+    color: #ffb78c;
+  }
+  
+  .banner h2 {
+    padding: .55rem 0;
+    border-top: 4px solid #ffb78c;
+    border-bottom: 4px solid #ffb78c;
+    font-size: 1.44rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: 'Work Sans', 'Arial', sans-serif;
+  }
+  
+  .banner h1 {
+    padding-top: 1.11rem;
+    font-size: 11rem;
+    font-weight: 900;
+    font-family: 'Abril Fatface', sans-serif;
+  }
+  
+  @media only screen and (max-width: 750px) {
+    .banner {
+      height: 40rem;
+    }
+  
+    .banner h1 {
+      font-size: 8rem;
+    }
+  }
+  
+  @media only screen and (max-width: 530px) {
+    .banner {
+      height: 30rem;
+    }
+  
+    .banner h1 {
+      font-size: 6rem;
+    }
+  }
+  
+  /* Journal */
+  
+  .journal {
+    padding: 0 25% 4rem 25%;
+    background-color: rgb(254, 231, 218);
+    color: #4a4a4a;
+    font-family: 'Work Sans', serif;
+  }
+  
+  .photo {
+    width: 75%;
+    padding: 1.11rem;
+    border-radius: 5px;
+    margin: 0 auto 4.44rem auto;
+    background-color: white;
+  }
+  
+  .photo .image-container {
+    overflow: hidden;
+    margin-bottom: 1.11rem;
+  }
+  
+  .photo .image-container img {
+    width: 100%;
+  }
+  
+  .photo .caption {
+    font-style: italic;
+    font-family: 'Merriweather', serif;
+  }
+  
+  .photo.first {
+    position: relative;
+    top: -2.77rem;
+    margin-bottom: 1.67rem;
+  }
+  
+  .journal p {
+    padding-bottom: 2.77rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  .journal .first-letter {
+    float: left;
+    padding-right: 1.4rem;
+    font-family: "Abril Fatface", serif;
+    font-size: 7.44rem;
+    color: #10b0d8;
+    line-height: .87;
+  }
+  
+  .quote {
     display: block;
+    padding: 4.44rem 0;
+    margin-bottom: 3.33rem;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    text-align: center;
+    font-size: 3.55rem;
+    font-weight: 800;
+    line-height: 1.2;
   }
-}
-
-@media only screen and (max-width: 540px) {
-  header {
-    flex-direction: column;
-    padding-left: 0;
-    padding-right: 0;
+  
+  @media only screen and (max-width: 680px) {
+    .journal {
+      padding: 0 10% 4rem 10%;
+    }
   }
-
-  header .logo-small {
-    margin-bottom: 1rem;
-  }
-}
-
-/* Banner */
-
-#banner {
-  position: relative;
-  height: 43.75rem;
-  padding: 0 25%;
-  background: url("	https://content.codecademy.com/courses/freelance-1/unit-6/banner.png")
-    center center no-repeat;
-  background-size: cover;
-  text-align: center;
-}
-
-#banner:before {
-  /* #ff8000 Overlay */
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 128, 0, 0.75);
-}
-
-#banner * {
-  position: relative; /* Makes elements display above overlay. */
-}
-
-h1 {
-  padding-top: 10.4375rem;
-  padding-bottom: 1.25rem;
-  font-family: "Creepster", cursive;
-  font-size: 8rem;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-#banner p {
-  color: white;
-  line-height: 1.5;
-  font-size: 1.375rem;
-}
-
-@media only screen and (max-width: 820px) {
-  h1 {
-    padding-top: 7rem;
-    font-size: 6rem;
-  }
-}
-
-@media only screen and (max-width: 590px) {
-  h1 {
-    font-size: 4rem;
-  }
-}
-
-/* Color Guide */
-
-#color-guide {
-  padding: 3.875rem 15% 13.5rem 15%;
-}
-
-#color-guide .introduction {
-  padding: 0 10%;
-  margin-bottom: 0.75rem;
-  text-align: center;
-  font-size: 1.375rem;
-  line-height: 1.4;
-}
-
-#color-guide h2 {
-  margin-bottom: 2.4375rem;
-  line-height: 1;
-  font-size: 2rem;
-  color: #ff8000;
-}
-
-#color-guide .color {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 5.25rem;
-}
-
-.color .information {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 35%;
-}
-
-.color .information h3 {
-  padding-bottom: 0.5rem;
-  font-size: 1.375rem;
-  font-weight: bold;
-}
-
-.color .information p {
-  font-size: 0.875rem;
-  line-height: 1.4;
-}
-
-.color .swatches {
-  width: 60%;
-}
-
-.color .swatches h4 {
-  margin-bottom: 1.25rem;
-  font-size: 1.125rem;
-  font-weight: bold;
-  color: #9b9b9b;
-}
-
-.color .swatch {
-  display: flex;
-  height: 6.6875rem;
-  border: 10px solid #e6e6e6;
-  margin-bottom: 1.25rem;
-}
-
-.color .swatch:last-child {
-  margin-bottom: 0;
-}
-
-.color .swatch > div {
-  flex-grow: 1;
-  border-right: 10px solid #e6e6e6;
-}
-
-.color .swatch > div:last-child {
-  border-right: 0;
-}
-
-@media only screen and (max-width: 820px) {
-  #color-guide .color {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .color .information {
-    width: 100%;
-    margin-bottom: 3rem;
-    align-items: center;
-  }
-
-  .color .information h3 {
-    padding-bottom: 1.5rem;
-  }
-
-  .color .information p {
-    margin-bottom: 2rem;
-  }
-
-  .color .swatches {
-    width: 100%;
-  }
-}
-
-/* Red Swatches */
-
-.reds .base-color {
-  color: hsl(350, 100%, 50%);
-}
-
-/* Red lightness decreases by 15 */
-.reds .lightness .color-1 {
-  background-color: hsl(350, 100%, 80%);
-}
-
-.reds .lightness .color-2 {
-  background-color: hsl(350, 100%, 65%);
-}
-
-.reds .lightness .color-3 {
-  background-color: hsl(350, 100%, 50%);
-}
-
-.reds .lightness .color-4 {
-  background-color: hsl(350, 100%, 35%);
-}
-
-.reds .lightness .color-5 {
-  background-color: hsl(350, 100%, 20%);
-}
-
-/* Red saturation decreases by 15 */
-.reds .saturation .color-1 {
-  background-color: hsl(350, 100%, 50%);
-}
-
-.reds .saturation .color-2 {
-  background-color: hsl(350, 85%, 50%);
-}
-
-.reds .saturation .color-3 {
-  background-color: hsl(350, 70%, 50%);
-}
-
-.reds .saturation .color-4 {
-  background-color: hsl(350, 55%, 50%);
-}
-
-.reds .saturation .color-5 {
-  background-color: hsl(350, 40%, 50%);
-}
-
-/* Red hue increases by 15 */
-.reds .hue .color-1 {
-  background-color: hsl(350, 100%, 50%);
-}
-
-.reds .hue .color-2 {
-  background-color: hsl(335, 100%, 50%);
-}
-
-.reds .hue .color-3 {
-  background-color: hsl(350, 100%, 50%);
-}
-
-.reds .hue .color-4 {
-  background-color: hsl(5, 100%, 50%);
-}
-
-.reds .hue .color-5 {
-  background-color: hsl(20, 100%, 50%);
-}
-
-/* Green Swatches */
-
-.greens .base-color {
-  color: hsl(130, 100%, 50%);
-}
-
-/* Green lightness decreases by 20 */
-.greens .lightness .color-1 {
-  background-color: hsl(130, 100, 90%);
-}
-
-.greens .lightness .color-2 {
-  background-color: hsl(103, 100%, 70%);
-}
-
-.greens .lightness .color-3 {
-  background-color: hsl(103, 100%, 50%);
-}
-
-.greens .lightness .color-4 {
-  background-color: hsl(103, 100%, 30%);
-}
-
-.greens .lightness .color-5 {
-  background-color: hsl(104, 100%, 10%);
-}
-
-/* Green saturation decreases by 20 */
-.greens .saturation .color-1 {
-  background-color: hsl(130, 100%, 50%);
-}
-
-.greens .saturation .color-2 {
-  background-color: hsl(130, 80%, 50%);
-}
-
-.greens .saturation .color-3 {
-  background-color: hsl(130, 60%, 50%);
-}
-
-.greens .saturation .color-4 {
-  background-color: hsl(130, 40%, 50%);
-}
-
-.greens .saturation .color-5 {
-  background-color: hsl(131, 20%, 50%);
-}
-
-/* Green hue increases by 22 */
-.greens .hue .color-1 {
-  background-color: hsl(130, 100%, 50%);
-}
-
-.greens .hue .color-2 {
-  background-color: hsl(108, 100%, 50%);
-}
-
-.greens .hue .color-3 {
-  background-color: hsl(130, 100%, 50%);
-}
-
-.greens .hue .color-4 {
-  background-color: hsl(152, 100%, 50%);
-}
-
-.greens .hue .color-5 {
-  background-color: hsl(174, 100%, 50%);
-}
-
-/* Blue Swatches */
-
-.blues .base-color {
-  color: hsl(220, 100%, 50%);
-}
-
-/* Blue lightness decreases by 20 */
-.blues .lightness .color-1 {
-  background-color: hsl(220, 100%, 90%);
-}
-
-.blues .lightness .color-2 {
-  background-color: hsl(220, 100%, 70%);
-}
-
-.blues .lightness .color-3 {
-  background-color: hsl(220, 100%, 50%);
-}
-
-.blues .lightness .color-4 {
-  background-color: hsl(220, 100%, 30%);
-}
-
-.blues .lightness .color-5 {
-  background-color: hsl(220, 100%, 10%);
-}
-
-/* Blue saturation decreases by 20 */
-.blues .saturation .color-1 {
-  background-color: hsl(220, 100%, 50%);
-}
-
-.blues .saturation .color-2 {
-  background-color: hsl(220, 80%, 50%);
-}
-
-.blues .saturation .color-3 {
-  background-color: hsl(220, 60%, 50%);
-}
-
-.blues .saturation .color-4 {
-  background-color: hsl(220, 40%, 50%);
-}
-
-.blues .saturation .color-5 {
-  background-color: hsl(220, 20%, 50%);
-}
-
-/* Blue hue decreases by 20 */
-.blues .hue .color-1 {
-  background-color: hsl(220, 100%, 50%);
-}
-
-.blues .hue .color-2 {
-  background-color: hsl(240, 100%, 50%);
-}
-
-.blues .hue .color-3 {
-  background-color: hsl(220, 100%, 50%);
-}
-
-.blues .hue .color-4 {
-  background-color: hsl(200, 100%, 50%);
-}
-
-.blues .hue .color-5 {
-  background-color: hsl(180, 100%, 50%);
-}
-
-/* Footer */
-
-footer {
-  position: relative;
-  height: 30rem;
-  padding: 7.8125rem 30% 0 30%;
-  background: url("https://content.codecademy.com/courses/freelance-1/unit-6/footer.png")
-    center center no-repeat;
-  background-size: cover;
-  text-align: center;
-  font-size: 1.125rem;
-  line-height: 1.4;
-  color: white;
-}
-
-footer:before {
-  /* Overlay */
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-footer * {
-  position: relative; /* Makes elements display above overlay. */
-}
-
-footer strong {
-  display: block;
-  margin-bottom: 1.25rem;
-  font-size: 2.25rem;
-}
-
-footer p {
-  margin-bottom: 4.3125rem;
-}
-
-footer .button {
-  padding: 1.25rem 3.75rem;
-  border-radius: 4px;
-  background-color: #ff8000;
-}
-
-@media only screen and (max-width: 560px) {
+  
+  /* Footer */
+  
   footer {
-    padding: 4.8125rem 15% 0 15%;
+    display: flex;
+    align-items: center;
+    padding: 0 1%;
+    background-color: #212121;
+    font-family: 'Croissant One';
   }
-}
+  
+  footer .image-container {
+    width: 400px;
+  }
+  
+  footer .content {
+    flex-grow: 1;
+    font-style: italic;
+    color: #9b9b9b;
+    line-height: 1.5;
+  }
+  
+  footer p {
+    padding-bottom: 1.66rem;
+  }
+  
+  footer p:last-child {
+    padding-bottom: 0;
+  }
+  
+  footer .author {
+    color: #ffb78c;
+  }
+  
+  footer em {
+    color: #cfcfcf;
+  }
+  
+  @media only screen and (max-width: 750px) {
+    footer {
+      flex-direction: column;
+      padding: 0 10% 2rem 10%;
+    }
+  
+    footer .image-container {
+      height: 300px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+  }

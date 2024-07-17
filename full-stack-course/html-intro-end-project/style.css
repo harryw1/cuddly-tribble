@@ -1,0 +1,70 @@
+/* Global Styles */
+body,
+html {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Body Styling */
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* Header Styles */
+h1 {
+  color: #006600;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  color: #004d00;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* Paragraph Styles */
+p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+/* List Styles */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Example Hover Effect for Links */
+a:hover {
+  color: #009900;
+}
+
+/* Table Centering and Styling */
+table {
+  margin: 20px auto; /* Centers the table and adds vertical spacing */
+  border-collapse: collapse; /* Removes gaps between borders */
+  width: 90%; /* Adjust as needed */
+}
+
+th,
+td {
+  padding: 8px; /* Adds space inside cells */
+  text-align: left; /* Aligns text to the left; adjust as needed */
+  border-bottom: 1px solid #ddd; /* Adds a bottom border to each cell */
+}
+
+th {
+  background-color: #f2f2f2; /* Light background for header cells */
+}
+
+/* Optional: Add a border to the entire table */
+table {
+  border: 1px solid #ddd;
+}

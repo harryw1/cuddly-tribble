@@ -6,3 +6,23 @@
     opacity: 0.9;
     justify-content: center;
 }
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: black;
+    opacity: 0.9;
+    display: inline-flex;
+}
+
+.nav-bar img {
+    height: 50px;
+    width: 50px;
+}
+
+.nav-bar ul {
+    display: inline-flex;
+    list-style-type: none;
+}

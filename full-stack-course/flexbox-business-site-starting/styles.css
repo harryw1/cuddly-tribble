@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header img {
+    height: 50px;
+}
+
+/* Mission Section */
+#mission {
+    padding: 20px;
+    background-color: #e8e8e8;
+    text-align: center;
+}
+
+#mission h2 {
+    margin-top: 0;
+}
+
+/* Products Section */
+#products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#products h2{
+    width: 100%;
+    text-align: center;
+}
+
+.product {
+    flex: 1 1 30%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.product img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product h3 {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Team Section */
+#team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#team h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.employee {
+    flex: 1 1 30%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.employee img {
+    max-width: 100%;
+    height: auto;
+}

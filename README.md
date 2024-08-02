@@ -69,10 +69,3 @@ After finishing the first module in the Full Stack Engineering path, I have lear
 and CSS. The next module is focused on the basics of JavaScript. By the end of this module, I should
 be capable of creating more interactive webpages and understand the three major components of modern
 webdev - HTML, CSS, and JS.
-
-## How to Run
-
-1. Clone the repository:
-
-   ```sh
-   git clone https://github.com/your-username/full-stack-course-projects.git

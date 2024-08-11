@@ -40,13 +40,21 @@ This repository contains various projects and exercises completed as part of the
   - `index.html`
 
 - **nyc-blog-project/**: A blog project about NYC.
-  - `project1.html`
-  - `project2/`
-    - `semantichtmlpractice.html`
+  - `index.html`
+
+- **project1.html**: A standalone HTML project.
+
+- **project2/**: A directory containing additional project files.
+  - `index.html`
+
+- **semantichtmlpractice.html**: A practice file for semantic HTML.
 
 - **tables-practice/**: A practice project for HTML tables.
 
 - **tea-cozy-project/**: A project for a fictional tea shop.
+  - `index.html`
+  - `resources/`
+    - `style.css`
 
 ## Technologies Used
 
@@ -65,7 +73,4 @@ Throughout these projects, I faced various challenges such as creating responsiv
 
 ## Future Work
 
-After finishing the first module in the Full Stack Engineering path, I have learned the basics of HTML
-and CSS. The next module is focused on the basics of JavaScript. By the end of this module, I should
-be capable of creating more interactive webpages and understand the three major components of modern
-webdev - HTML, CSS, and JS.
+In future projects, I plan to incorporate JavaScript to create more interactive and dynamic web pages. Additionally, I aim to explore advanced CSS techniques and frameworks to enhance the design and functionality of my projects.

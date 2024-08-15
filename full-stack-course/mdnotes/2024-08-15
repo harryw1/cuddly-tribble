@@ -1,0 +1,59 @@
+# Objects
+
+Now we're getting back to what I remember from CSII in college. Let's start by recapping
+objects in general.
+
+- Objects are non-primitive data types
+- Objects are passed by reference
+    - Passing by reference means we're point to 
+    a location in memory
+    - This means that objects are, essentially,
+    always mutable
+- Objects can store any data, for example:
+
+```javascript
+// Code snippet
+const person = {
+  height: "6 feet",
+  weight: "160 pounds",
+  hairColor: "brown",
+  eyeColor: "blue",
+  bloodType: "O+"
+};
+```
+
+This above code example abstracts the 'person' data structure into a set of 
+key:value pairs and can be accessed with 'dot' notation or 'bracket' notation.
+
+```javascript
+console.log(person.height);
+console.log(person.[hairColor]);
+```
+
+## 'this' Keyword
+
+
+
+- Point 1
+- Point 2
+- Point 3
+
+## Subheading 2
+
+1. Step 1
+2. Step 2
+3. Step 3
+
+## Subheading 3
+
+> Quote or important information
+
+## Subheading 4
+
+```python
+# Code snippet
+def hello_world():
+    print("Hello, World!")
+
+hello_world()
+```

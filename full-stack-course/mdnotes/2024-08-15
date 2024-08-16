@@ -83,4 +83,144 @@ const goat = {
 goat.diet(); // Prints undefined
 ```
 
-## 
+If we want to fix this code:
+
+```javascript
+const goat = {
+    dietType: "herbivore",
+    makeSound() {
+        console.log("baaa");
+    },
+    diet() {
+        console.log(this.dietType);
+    },
+};
+
+goat.diet();
+```
+
+## Privacy
+
+JS doesn't have any inherent way of creating privacy. JS developers use
+the prepending of an underscore, "\_xyz", to indicate to other people
+that a variable or some other data structure is not meant to be interacted
+with directly.
+
+## Getters and Setters
+
+Getters are functions within an object that can return values and beyond.
+
+```javascript
+const person = {
+    _firstName: "John",
+    _lastName: "Doe",
+    get fullName() {
+        if (this._firstName && this._lastName) {
+            return `${this._firstName} ${this._lastName}`;
+        } else {
+            return "Missing a first name or a last name.";
+        }
+    },
+};
+
+// To call the getter method:
+person.fullName; // 'John Doe'
+```
+
+Another example of a 'getter' function:
+
+```javascript
+const robot = {
+    _model: "1E78V2",
+    _energyLevel: 100,
+    get energyLevel() {
+        if (typeof this._energyLevel === "number") {
+            return `My current energy level is ${this._energyLevel}`;
+        } else {
+            return "System malfunction: cannot retrieve energy level";
+        }
+    },
+};
+
+robot.energyLevel;
+
+console.log(robot.energyLevel);
+```
+
+Setter functions are an appropriate way to handle modifying properties within objects
+and handle types so that we don't end up with anything funky.
+
+## Factory Function
+
+Similar to C++, we can create templates for returning different objects with the same structures. Below is an example
+of a factory function for making robots that take in two paramters and returns a new object that we can store in
+a variable.
+
+```javascript
+const robotFactory = (model, mobile) => {
+    return {
+        model: model, // or just model,
+        mobile: mobile, // or just mobile,
+        beep() {
+            console.log("Beep Boop");
+        },
+    };
+};
+
+const tinCan = robotFactory("P-500", true);
+
+tinCan.beep();
+```
+
+## Destructured Assignment
+
+Some shorthand to access properties and store them in variables outside of the object.
+
+```javascript
+const robot = {
+    model: "1E78V2",
+    energyLevel: 100,
+    functionality: {
+        beep() {
+            console.log("Beep Boop");
+        },
+        fireLaser() {
+            console.log("Pew Pew");
+        },
+    },
+};
+
+const { functionality } = robot;
+functionality.beep();
+```
+
+## Object Functions
+
+Some built in functions for objects that are nice to know:
+
+```javascript
+const robot = {
+    model: "SAL-1000",
+    mobile: true,
+    sentient: false,
+    armor: "Steel-plated",
+    energyLevel: 75,
+};
+
+// What is missing in the following method call?
+const robotKeys = Object.keys(robot);
+
+console.log(robotKeys);
+
+// Declare robotEntries below this line:
+const robotEntries = Object.entries(robot);
+console.log(robotEntries);
+
+// Declare newRobot below this line:
+const newRobot = Object.assign(
+    { laserBlaster: true, voiceRecognition: true },
+    robot
+);
+
+console.log(newRobot);
+```

@@ -1,4 +1,4 @@
-# Objects
+# JS Objects
 
 Now we're getting back to what I remember from CSII in college. Let's start by recapping
 objects in general.
@@ -12,7 +12,7 @@ objects in general.
 -   Objects can store any data, for example:
 
 ```javascript
-// Code snippet
+*// Code snippet*
 const person = {
     height: "6 feet",
     weight: "160 pounds",
@@ -26,8 +26,8 @@ This above code example abstracts the 'person' data structure into a set of
 key:value pairs and can be accessed with 'dot' notation or 'bracket' notation.
 
 ```javascript
-console.log(person.height);
-console.log(person.[hairColor]);
+console.*log*(person.height);
+console.*log*(person.[hairColor]);
 ```
 
 ## 'this' Keyword
@@ -43,11 +43,11 @@ const person = {
     eyeColor: "blue",
     bloodType: "O+",
     greeting: "hey!",
-    hello() {
-        console.log(this.greeting);
+    *hello*() {
+        console.*log*(this.greeting);
     },
 };
-person.hello();
+person.*hello*();
 ```
 
 Another example:
@@ -56,12 +56,12 @@ Another example:
 const robot = {
     model: "1E78V2",
     energyLevel: 100,
-    provideInfo() {
+    *provideInfo*() {
         return `I am ${this.model} and my current energy level is ${this.energyLevel}`;
     },
 };
 
-console.log(robot.provideInfo());
+console.*log*(robot.*provideInfo*());
 ```
 
 ## Arrow Function and 'this'
@@ -72,15 +72,15 @@ of our object. The below is an example of what happens when we try to call this 
 ```javascript
 const goat = {
     dietType: "herbivore",
-    makeSound() {
-        console.log("baaa");
+    *makeSound*() {
+        console.*log*("baaa");
     },
-    diet: () => {
-        console.log(this.dietType);
+    *diet*: () => {
+        console.*log*(this.dietType);
     },
 };
 
-goat.diet(); // Prints undefined
+goat.*diet*(); *// Prints undefined*
 ```
 
 If we want to fix this code:
@@ -88,15 +88,15 @@ If we want to fix this code:
 ```javascript
 const goat = {
     dietType: "herbivore",
-    makeSound() {
-        console.log("baaa");
+    *makeSound*() {
+        console.*log*("baaa");
     },
-    diet() {
-        console.log(this.dietType);
+    *diet*() {
+        console.*log*(this.dietType);
     },
 };
 
-goat.diet();
+goat.*diet*();
 ```
 
 ## Privacy
@@ -114,7 +114,7 @@ Getters are functions within an object that can return values and beyond.
 const person = {
     _firstName: "John",
     _lastName: "Doe",
-    get fullName() {
+    get *fullName*() {
         if (this._firstName && this._lastName) {
             return `${this._firstName} ${this._lastName}`;
         } else {
@@ -123,8 +123,8 @@ const person = {
     },
 };
 
-// To call the getter method:
-person.fullName; // 'John Doe'
+*// To call the getter method:*
+person.fullName; *// 'John Doe'*
 ```
 
 Another example of a 'getter' function:
@@ -133,7 +133,7 @@ Another example of a 'getter' function:
 const robot = {
     _model: "1E78V2",
     _energyLevel: 100,
-    get energyLevel() {
+    get *energyLevel*() {
         if (typeof this._energyLevel === "number") {
             return `My current energy level is ${this._energyLevel}`;
         } else {
@@ -144,7 +144,7 @@ const robot = {
 
 robot.energyLevel;
 
-console.log(robot.energyLevel);
+console.*log*(robot.energyLevel);
 ```
 
 Setter functions are an appropriate way to handle modifying properties within objects
@@ -157,19 +157,19 @@ of a factory function for making robots that take in two paramters and returns a
 a variable.
 
 ```javascript
-const robotFactory = (model, mobile) => {
+const *robotFactory* = (*model*, *mobile*) => {
     return {
-        model: model, // or just model,
-        mobile: mobile, // or just mobile,
-        beep() {
-            console.log("Beep Boop");
+        model: model, *// or just model,*
+        mobile: mobile, *// or just mobile,*
+        *beep*() {
+            console.*log*("Beep Boop");
         },
     };
 };
 
-const tinCan = robotFactory("P-500", true);
+const tinCan = *robotFactory*("P-500", true);
 
-tinCan.beep();
+tinCan.*beep*();
 ```
 
 ## Destructured Assignment
@@ -181,17 +181,17 @@ const robot = {
     model: "1E78V2",
     energyLevel: 100,
     functionality: {
-        beep() {
-            console.log("Beep Boop");
+        *beep*() {
+            console.*log*("Beep Boop");
         },
-        fireLaser() {
-            console.log("Pew Pew");
+        *fireLaser*() {
+            console.*log*("Pew Pew");
         },
     },
 };
 
 const { functionality } = robot;
-functionality.beep();
+functionality.*beep*();
 ```
 
 ## Object Functions
@@ -207,20 +207,124 @@ const robot = {
     energyLevel: 75,
 };
 
-// What is missing in the following method call?
-const robotKeys = Object.keys(robot);
+*// What is missing in the following method call?*
+const robotKeys = Object.*keys*(robot);
 
-console.log(robotKeys);
+console.*log*(robotKeys);
 
-// Declare robotEntries below this line:
-const robotEntries = Object.entries(robot);
-console.log(robotEntries);
+*// Declare robotEntries below this line:*
+const robotEntries = Object.*entries*(robot);
+console.*log*(robotEntries);
 
-// Declare newRobot below this line:
-const newRobot = Object.assign(
+*// Declare newRobot below this line:*
+const newRobot = Object.*assign*(
     { laserBlaster: true, voiceRecognition: true },
     robot
 );
 
-console.log(newRobot);
+console.*log*(newRobot);
 ```
+
+## Final Practice
+
+### Example 1
+
+```javascript
+const menu = {
+    _meal: "",
+    _price: 0,
+    set meal(mealToCheck) {
+        if (typeof mealToCheck === "string") {
+            this._meal = mealToCheck;
+        }
+    },
+    set price(priceToCheck) {
+        if (typeof priceToCheck === "number") {
+            this._price = priceToCheck;
+        }
+    },
+    get todaysSpecial() {
+        if (this._meal && this._price) {
+            return `Today's special is ${this._meal} for just $${this._price}`;
+        } else {
+            return "Meal or price was not set correctly!";
+        }
+    },
+};
+
+menu.meal = "Chicken Tikka";
+menu.price = 10.99;
+
+console.log(menu.todaysSpecial); // Output: Today's special is Chicken Tikka for just $10.99
+```
+
+### Example 2
+
+```javascript
+const team = {
+    _players: [
+        {
+            firstName: "Steve",
+            lastName: "Martin",
+            age: 82,
+        },
+        {
+            firstName: "John",
+            lastName: "Wayne",
+            age: 72,
+        },
+        {
+            firstName: "Tom",
+            lastName: "Hanks",
+            age: 62,
+        },
+    ],
+    _games: [
+        {
+            opponent: "Broncos",
+            teamPoints: 42,
+            opponentPoints: 27,
+        },
+        {
+            opponent: "Raiders",
+            teamPoints: 35,
+            opponentPoints: 21,
+        },
+        {
+            opponent: "Chiefs",
+            teamPoints: 28,
+            opponentPoints: 14,
+        },
+    ],
+    get players() {
+        return this._players;
+    },
+    get games() {
+        return this._games;
+    },
+    addPlayer(newFirstName, newLastName, newAge) {
+        const newPlayer = {
+            firstName: newFirstName,
+            lastName: newLastName,
+            age: newAge,
+        };
+        this._players.push(newPlayer);
+    },
+    addGame(newOpponent, newTeamPoints, newOpponentPoints) {
+        const newGame = {
+            opponent: newOpponent,
+            teamPoints: newTeamPoints,
+            opponentPoints: newOpponentPoints,
+        };
+        this._games.push(newGame);
+    },
+};
+
+team.addPlayer("Bugs", "Bunny", 76);
+console.log(team.players);
+
+team.addGame("Titans", 100, 98);
+console.log(team.games);
+```
+
+#home/fullstack

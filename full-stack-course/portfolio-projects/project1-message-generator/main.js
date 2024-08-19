@@ -29,16 +29,16 @@ const nouns = [
 ];
 
 const verbs = [
-  "ran",
-  "jumped",
-  "hopped",
-  "skipped",
-  "danced",
-  "sang",
-  "cried",
-  "laughed",
-  "screamed",
-  "shouted",
+  "shopping",
+  "laundry",
+  "cleaning",
+  "cooking",
+  "paying bills",
+  "mowing the lawn",
+  "walking the dog",
+  "picking up dry cleaning",
+  "washing the car",
+  "taking out the trash",
 ];
 
 const message = (adjs, nouns, verbs) => {
@@ -46,7 +46,7 @@ const message = (adjs, nouns, verbs) => {
   const noun = nouns[Math.floor(Math.random() * nouns.length)];
   const verb = verbs[Math.floor(Math.random() * verbs.length)];
 
-  return `The ${adj} ${noun} ${verb} over the moon.`;
+  return `Help! My ${adj} ${noun} is ${verb} and I don't know what to do!`;
 };
 
 console.log(message(adjs, nouns, verbs));

@@ -1,76 +1,53 @@
-# Full Stack Course Projects
+# Full Stack Development Learning Repository
 
-## Description
+This repository contains various projects, exercises, and notes from my journey learning full stack development through Codecademy and other resources.
 
-This repository contains various projects and exercises completed as part of the Full Stack Engineer Career Path on Codecademy. Each project showcases different aspects of front-end development, including HTML, CSS, and responsive design.
+## Structure
 
-## Project Structure
+- `/full-stack-course`: Contains subfolders for different topics and projects
+  - `/html-and-css`: HTML and CSS projects and exercises
+  - `/js-scripts`: JavaScript exercises and small projects
+  - `/mdnotes`: Markdown notes on various programming concepts
+  - `/portfolio-projects`: Larger portfolio projects
 
-- **broadway-design-project/**: A project focused on designing a Broadway-themed website.
-  - `index.html`
-  - `style.css`
+- `/htmx`: Exploration of HTMX technology (currently empty)
 
-- **css-practice.css**: A standalone CSS practice file.
+## Key Projects
 
-- **dasmoto-arts/**: A project for Dasmoto's Arts & Crafts.
-  - `index.html`
-  - `resources/`
-    - `css/`
-      - `styles.css`
+### HTML/CSS Projects
+- Broadway Design Project
+- Dasmoto's Arts & Crafts
+- Tea Cozy Project
 
-- **davies-burgers-project/**: A project for Davies Burgers.
-  - `index.html`
-  - `style.css`
+### JavaScript Projects
+- Credit Card Checker
+- Number Guesser Game
+- Rock Paper Scissors Game
 
-- **DevProject/**: A development project with additional resources.
-  - `index.html`
-  - `resources/`
-    - `css/`
-      - `index.css`
+### Portfolio Project
+- Message Generator (Mad Libs style story generator)
 
-- **flexbox-business-site-starting/**: A project focused on creating a business site using Flexbox.
-  - `index.html`
-  - `styles.css`
+## Notes
 
-- **html-intro-end-project/**: An introductory HTML project.
-  - `index.html`
-  - `style.css`
-
-- **jun-17-project/**: A project created on June 17.
-  - `index.html`
-
-- **nyc-blog-project/**: A blog project about NYC.
-  - `index.html`
-
-- **project1.html**: A standalone HTML project.
-
-- **project2/**: A directory containing additional project files.
-  - `index.html`
-
-- **semantichtmlpractice.html**: A practice file for semantic HTML.
-
-- **tables-practice/**: A practice project for HTML tables.
-
-- **tea-cozy-project/**: A project for a fictional tea shop.
-  - `index.html`
-  - `resources/`
-    - `style.css`
+The `/mdnotes` folder contains markdown files with notes on various programming concepts, particularly focused on JavaScript.
 
 ## Technologies Used
 
 - HTML
 - CSS
+- JavaScript
+- Markdown
 
-## Features
+## Future Plans
 
-- Responsive web design
-- Semantic HTML
-- CSS styling and layout techniques
+- Expand JavaScript projects
+- Explore backend technologies
+- Develop full-stack applications
 
-## Challenges and Learnings
+## Author
 
-Throughout these projects, I faced various challenges such as creating responsive layouts, using semantic HTML elements, and applying CSS styles effectively. Each project helped me improve my understanding of front-end development concepts and best practices.
+Harrison Weiss
 
-## Future Work
+## License
 
-In future projects, I plan to incorporate JavaScript to create more interactive and dynamic web pages. Additionally, I aim to explore advanced CSS techniques and frameworks to enhance the design and functionality of my projects.
+This project is open source and available under the [MIT License](LICENSE).

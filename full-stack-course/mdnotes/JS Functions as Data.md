@@ -10,7 +10,7 @@ We’re coming back to the idea of functions being passed by reference. The exam
 
 ```javascript
 const announceThatIAmDoingImportantWork = () => {
-    console.log("I'm doing very important work!");
+  console.log("I'm doing very important work!");
 };
 
 const busy = announceThatIAmDoingImportantWork;

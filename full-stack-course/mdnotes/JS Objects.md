@@ -3,13 +3,13 @@
 Now we're getting back to what I remember from CSII in college. Let's start by recapping
 objects in general.
 
--   Objects are non-primitive data types
--   Objects are passed by reference
-    -   Passing by reference means we're point to
-        a location in memory
-    -   This means that objects are, essentially,
-        always mutable
--   Objects can store any data, for example:
+- Objects are non-primitive data types
+- Objects are passed by reference
+  - Passing by reference means we're point to
+    a location in memory
+  - This means that objects are, essentially,
+    always mutable
+- Objects can store any data, for example:
 
 ```javascript
 *// Code snippet*
@@ -231,25 +231,25 @@ console.*log*(newRobot);
 
 ```javascript
 const menu = {
-    _meal: "",
-    _price: 0,
-    set meal(mealToCheck) {
-        if (typeof mealToCheck === "string") {
-            this._meal = mealToCheck;
-        }
-    },
-    set price(priceToCheck) {
-        if (typeof priceToCheck === "number") {
-            this._price = priceToCheck;
-        }
-    },
-    get todaysSpecial() {
-        if (this._meal && this._price) {
-            return `Today's special is ${this._meal} for just $${this._price}`;
-        } else {
-            return "Meal or price was not set correctly!";
-        }
-    },
+  _meal: "",
+  _price: 0,
+  set meal(mealToCheck) {
+    if (typeof mealToCheck === "string") {
+      this._meal = mealToCheck;
+    }
+  },
+  set price(priceToCheck) {
+    if (typeof priceToCheck === "number") {
+      this._price = priceToCheck;
+    }
+  },
+  get todaysSpecial() {
+    if (this._meal && this._price) {
+      return `Today's special is ${this._meal} for just $${this._price}`;
+    } else {
+      return "Meal or price was not set correctly!";
+    }
+  },
 };
 
 menu.meal = "Chicken Tikka";
@@ -262,62 +262,62 @@ console.log(menu.todaysSpecial); // Output: Today's special is Chicken Tikka for
 
 ```javascript
 const team = {
-    _players: [
-        {
-            firstName: "Steve",
-            lastName: "Martin",
-            age: 82,
-        },
-        {
-            firstName: "John",
-            lastName: "Wayne",
-            age: 72,
-        },
-        {
-            firstName: "Tom",
-            lastName: "Hanks",
-            age: 62,
-        },
-    ],
-    _games: [
-        {
-            opponent: "Broncos",
-            teamPoints: 42,
-            opponentPoints: 27,
-        },
-        {
-            opponent: "Raiders",
-            teamPoints: 35,
-            opponentPoints: 21,
-        },
-        {
-            opponent: "Chiefs",
-            teamPoints: 28,
-            opponentPoints: 14,
-        },
-    ],
-    get players() {
-        return this._players;
+  _players: [
+    {
+      firstName: "Steve",
+      lastName: "Martin",
+      age: 82,
     },
-    get games() {
-        return this._games;
+    {
+      firstName: "John",
+      lastName: "Wayne",
+      age: 72,
     },
-    addPlayer(newFirstName, newLastName, newAge) {
-        const newPlayer = {
-            firstName: newFirstName,
-            lastName: newLastName,
-            age: newAge,
-        };
-        this._players.push(newPlayer);
+    {
+      firstName: "Tom",
+      lastName: "Hanks",
+      age: 62,
     },
-    addGame(newOpponent, newTeamPoints, newOpponentPoints) {
-        const newGame = {
-            opponent: newOpponent,
-            teamPoints: newTeamPoints,
-            opponentPoints: newOpponentPoints,
-        };
-        this._games.push(newGame);
+  ],
+  _games: [
+    {
+      opponent: "Broncos",
+      teamPoints: 42,
+      opponentPoints: 27,
     },
+    {
+      opponent: "Raiders",
+      teamPoints: 35,
+      opponentPoints: 21,
+    },
+    {
+      opponent: "Chiefs",
+      teamPoints: 28,
+      opponentPoints: 14,
+    },
+  ],
+  get players() {
+    return this._players;
+  },
+  get games() {
+    return this._games;
+  },
+  addPlayer(newFirstName, newLastName, newAge) {
+    const newPlayer = {
+      firstName: newFirstName,
+      lastName: newLastName,
+      age: newAge,
+    };
+    this._players.push(newPlayer);
+  },
+  addGame(newOpponent, newTeamPoints, newOpponentPoints) {
+    const newGame = {
+      opponent: newOpponent,
+      teamPoints: newTeamPoints,
+      opponentPoints: newOpponentPoints,
+    };
+    this._games.push(newGame);
+  },
 };
 
 team.addPlayer("Bugs", "Bunny", 76);

@@ -1,6 +1,7 @@
 # Forms, Requests, and Information
 
 ## HTTP Requests
+
 In the most recent module that I started, the focus has been on
 users interacting with a webpage to do more than just create requests
 from the serve to change information on the screen. Now we're getting
@@ -9,6 +10,7 @@ on the server. For example, we may have users submit a form to create
 a new user account, or to update their profile information.
 
 ## Example Form
+
 Here is an example from Codeacademy that shows how we might have a
 form element that calls an action and a `POST` method to send the
 information to the server.
@@ -30,8 +32,8 @@ will send information to the server. Here is the code that I wrote:
 
 ```html
 <form action="/practice.html" method="POST">
-   <h1>Burgers!</h1>
-   <p>Here's a fun place to put a form about burgers!</p>
+  <h1>Burgers!</h1>
+  <p>Here's a fun place to put a form about burgers!</p>
 </form>
 ```
 
@@ -44,7 +46,7 @@ The `input` element has a `type` attribute that specifies the type of rendering 
 
 ```html
 <form action="/example.html" method="POST">
-   <input type="text" name="first-text-field">
+  <input type="text" name="first-text-field" />
 </form>
 ```
 
@@ -52,7 +54,11 @@ In this example, we have a `text` input field that will render a text field for 
 
 ```html
 <form action="/example.html" method="POST">
-   <input type="text" name="first-text-field" value="Enter your name">
+  <input
+    type="text"
+    name="first-text-field"
+    value="Enter your name"
+  />
 </form>
 ```
 
@@ -61,3 +67,5 @@ In this example, we have a `text` input field that will render a text field for 
 The `label` element is used to create a label for an `input` element. This is useful for accessibility and usability reasons and it will help a user identify what information is expected in the field.
 
 ```html
+
+```

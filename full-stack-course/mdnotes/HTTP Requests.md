@@ -34,3 +34,30 @@ will send information to the server. Here is the code that I wrote:
    <p>Here's a fun place to put a form about burgers!</p>
 </form>
 ```
+
+## `<input>` Elements
+
+The `input` element is used to create form fields that users can
+enter information into. A form is really not a form without the ability for users to enter information.
+
+The `input` element has a `type` attribute that specifies the type of rendering and expected input. In this first example, we have a `text` input type that will render a text field for users to enter information.
+
+```html
+<form action="/example.html" method="POST">
+   <input type="text" name="first-text-field">
+</form>
+```
+
+In this example, we have a `text` input field that will render a text field for users to enter information. The `name` attribute is used to identify the field when the form is submitted. We can decide whether a blank field value to start is appropriate or not and set a default value with the `value` attribute.
+
+```html
+<form action="/example.html" method="POST">
+   <input type="text" name="first-text-field" value="Enter your name">
+</form>
+```
+
+## `<label>` Elements
+
+The `label` element is used to create a label for an `input` element. This is useful for accessibility and usability reasons and it will help a user identify what information is expected in the field.
+
+```html

@@ -67,5 +67,33 @@ In this example, we have a `text` input field that will render a text field for 
 The `label` element is used to create a label for an `input` element. This is useful for accessibility and usability reasons and it will help a user identify what information is expected in the field.
 
 ```html
-
+<form action="/example.html" method="POST">
+  <label for="first-text-field">Enter your name:</label>
+  <input
+    type="text"
+    name="first-text-field"
+    value="Enter your name"
+  />
+</form>
 ```
+
+In this example, we have a `label` element that has a `for` attribute that matches the `id` attribute of the `input` element. This will help screen readers and other assistive technologies to identify the label with the input field.
+
+## Special Form Elements
+
+When using a form or a field, there are special types we can give input fields to change their behavior. For example, we can use a `password` input type to hide the text that is entered into the field.
+
+```html
+<form action="/example.html" method="POST">
+  <label for="password">Enter your password:</label>
+  <input
+    type="password"
+    name="password"
+    value="Enter your password"
+  />
+</form>
+```
+
+In this example, we have a `password` input type that will hide the text that is entered into the field. This is useful for sensitive information like passwords.
+
+This is not the only special form type and the others follow a similar pattern. For example, we can use a `checkbox` input type to create a checkbox that users can check or uncheck, a `number` input type to create a number field, and a `submit` input type to create a submit button.

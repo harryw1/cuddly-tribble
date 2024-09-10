@@ -1,18 +1,64 @@
 # Form Validation
 
-This is where things become interesting in terms of complexity. Now we have to start to thing about websites that aren’t just displaying information, but are accepting, validating, checking and storing data. So now, we have a back-end serving data to the front-end, which can also receive data from users and clients to send back to the back-end. This module is all about forms and form validation.
+## Introduction
 
-## Why Validate?
+Some forms on webpages are not optional, and the user must fill them out. In this case, it is important to validate the form before submitting it. This is to ensure that the user has entered the correct information and that the form can be processed correctly.
 
-I really like the way Codeacademy breaks this down, so I am going to quote them below:
+For example:
 
-> Most data, once submitted, is stored by a website or web application. It’s stored in a [database](https://www.codecademy.com/resources/docs/general/database) on the [server](https://www.codecademy.com/resources/docs/general/server) side. There are important reasons for us to make sure the information that will be stored in the database is accurate.
->
-> We want operations that depend on the data to work: Allowing a user to enter an incorrectly formatted email address, either on purpose or by accident, means that we won’t be able to contact that user later. Allowing a user to sign up for an account with a username that is already in use could cause numerous errors down the line. Making sure we collect all the data we need and checking that the data are formatted correctly can save a web application and its users a lot of trouble.
->
-> We want to keep our site secure: Unprotected data leaves entry points for malicious actors to hurt our application or our users. Allowing a user to submit a non-secure password means that their account will not be protected. Unprotected forms can also allow bits of code to be injected into our servers. This can potentially leave our users’ sensitive information exposed. The malicious actor could even gain control of our site or corrupt our existing data!
+```html
+<form action="/example.html" method="POST">
+  <label for="allergies">Do you have any dietary restrictions?</label>
+  <br>
+  <input id="allergies" name="allergies" type="text" required>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+```
 
-## Regular Expressions
+In this example, the user must enter their dietary restrictions before submitting the form. If they do not, the form will not be submitted.
 
-We’re going to be using `regex` to be performing a lot of this validation because we can use to to ensure valid expressions without having to do a bunch of `if` statements and whatnot.
-#home/fullstack
+## Required Attribute
+
+The `required` attribute can be added to form elements to indicate that the user must fill out the field before submitting the form. If the user tries to submit the form without filling out the required field, they will receive an error message. The kind of error message depends on the browser.
+
+### Number Input Example
+
+```html
+<form action="/example.html" method="POST">
+  <label for="guests">Enter # of guests:</label>
+  <input id="guests" name="guests" type="number" min="1" max="4">
+  <input type="submit" value="Submit">
+</form>
+```
+
+In this form, the user must enter a number between 1 and 4. We have both the `required` attribute and a `min` and `max`.
+
+### Text Input Example
+
+```html
+<form action="/example.html" method="POST">
+  <label for="summary">Summarize your feelings in less than 250 characters</label>
+  <input id="summary" name="summary" type="text" minlength="5" maxlength="250" required>
+  <input type="submit" value="Submit">
+</form>
+```
+
+In this form, the user must enter a text that is at least 5 characters long and at most 250 characters long.
+
+## Custom Validation and Pattern Matching
+
+In some cases, the `required` attribute is not enough to validate the form. For example, if you want to validate an email address, you can use the `pattern` attribute.
+
+### Credit Card Example
+
+```html
+<form action="/example.html" method="POST">
+  <label for="payment">Credit Card Number (no spaces):</label>
+  <br>
+  <input id="payment" name="payment" type="text" required pattern="[0-9]{14,16}">
+  <input type="submit" value="Submit">
+</form>
+```
+
+The `pattern` attribute uses a regular expression to validate the input. We're asking the form to match any number between 0 and 9, and the length should be between 14 and 16 characters.

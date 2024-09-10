@@ -6,7 +6,7 @@ This is where things become interesting in terms of complexity. Now we have to s
 
 I really like the way Codeacademy breaks this down, so I am going to quote them below:
 
-> Most data, once submitted, is stored by a website or web application. It’s stored in a ~[database](https://www.codecademy.com/resources/docs/general/database)~ on the ~[server](https://www.codecademy.com/resources/docs/general/server)~ side. There are important reasons for us to make sure the information that will be stored in the database is accurate.
+> Most data, once submitted, is stored by a website or web application. It’s stored in a [database](https://www.codecademy.com/resources/docs/general/database) on the [server](https://www.codecademy.com/resources/docs/general/server) side. There are important reasons for us to make sure the information that will be stored in the database is accurate.
 >
 > We want operations that depend on the data to work: Allowing a user to enter an incorrectly formatted email address, either on purpose or by accident, means that we won’t be able to contact that user later. Allowing a user to sign up for an account with a username that is already in use could cause numerous errors down the line. Making sure we collect all the data we need and checking that the data are formatted correctly can save a web application and its users a lot of trouble.
 >

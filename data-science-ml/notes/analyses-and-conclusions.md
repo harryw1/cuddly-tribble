@@ -15,3 +15,13 @@ From Codeacademy:
 Descriptive analyses usually include measures of central tendency like mean, median, and mode, as well as measures of dispersion.
 
 Data visualization is also typically included in descriptive analysis.
+
+## Exploratory Analysis
+
+Typically after descriptive analysis, we move on to exploratory analysis. This is where we start to look for patterns and relationships in the data, more specifically, relationships between variables.
+
+Again, exploratory analysis cannot tell us why these relationships exist, but it can help us to identify them. "Correlation does not imply causation."
+
+### Clustering
+
+Another technique used in exploratory analysis is clustering. Clustering is a type of unsupervised machine learning that groups data points together based on their similarities.

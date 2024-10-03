@@ -25,3 +25,17 @@ Again, exploratory analysis cannot tell us why these relationships exist, but it
 ### Clustering
 
 Another technique used in exploratory analysis is clustering. Clustering is a type of unsupervised machine learning that groups data points together based on their similarities.
+
+## Inferential Analysis
+
+Inferential analyses let us test hypotheses and understand relationships between variables. This is where we start to make inferences about the population based on the sample data.
+
+An example of inferential analysis is A/B testing. I see this sort of thing all the time on YouTube, where they test different thumbnails to see which one gets more clicks.
+
+> Imagine we want to know if a blue or a green button will get more clicks on a website. We hypothesize that the green button will be more successful and we run an A/B test on a sample of people that visit our site. Half the sample sees the blue button (option A) and half see the green button (option B). At the end of the test, 90% of people that saw the green button clicked it, whereas 60% of the people that saw the blue button clicked it. Now we need to ask, “If color wasn’t related to click rate, how likely was a 30% difference just by chance?” We can use statistics to calculate that probability. If there is less than a 5% probability that our results happened by chance, we have good evidence that green buttons get more clicks! We can extend these results to everyone that visits our site (the whole population), so it makes sense to use green buttons on our website.
+
+Some rules of thumb:
+
+- Sample size matters. The larger the sample size, the more confident we can be in our results. A sample size of 10% of the population is a good rule of thumb.
+- Random sampling is important. We want our sample to be representative of the population.
+- We can only test one hypothesis at a time.

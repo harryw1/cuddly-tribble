@@ -39,3 +39,27 @@ Some rules of thumb:
 - Sample size matters. The larger the sample size, the more confident we can be in our results. A sample size of 10% of the population is a good rule of thumb.
 - Random sampling is important. We want our sample to be representative of the population.
 - We can only test one hypothesis at a time.
+
+## Causaul Analysis
+
+Causal analysis is where we start to ask why things are happening. This is where we start to look at the mechanisms behind the relationships we've identified in our exploratory and inferential analyses.
+
+Causal analysis requires us to have experiments wher we only change one variable at a time, carefully controlling for other variables, and are repeatable with the same results.
+
+### Causal Analysis with Observational Data
+
+Sometimes we can't run experiments to repeat results. In this case, we can use observational data to try to infer causality. When we do this, we need to be very careful about the conclusions we draw.
+
+Causal inference with observational data requires:
+- Advanced techniques to identify causal relationships
+- Meeting very specific and strict assumptions
+- Appropriate statistical methods and tests
+
+## Predictive Analysis
+
+Sometimes we interact with predictive analysis without even realizing it. For example, when we use Google Maps to find the fastest route to work, we're using predictive analysis. Predictive analysis uses data and supervised machine learning to make predictions about the future based on past data and the likelihood of future events.
+
+Some supervised machine learning techniques used in predictive analysis include:
+- Regression models
+- Support vector machines
+- and Deep learning convolutional neural networks

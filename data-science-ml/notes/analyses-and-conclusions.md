@@ -40,11 +40,11 @@ Some rules of thumb:
 - Random sampling is important. We want our sample to be representative of the population.
 - We can only test one hypothesis at a time.
 
-## Causaul Analysis
+## Causal Analysis
 
 Causal analysis is where we start to ask why things are happening. This is where we start to look at the mechanisms behind the relationships we've identified in our exploratory and inferential analyses.
 
-Causal analysis requires us to have experiments wher we only change one variable at a time, carefully controlling for other variables, and are repeatable with the same results.
+Causal analysis requires us to have experiments where we only change one variable at a time, carefully controlling for other variables, and are repeatable with the same results.
 
 ### Causal Analysis with Observational Data
 
@@ -62,4 +62,4 @@ Sometimes we interact with predictive analysis without even realizing it. For ex
 Some supervised machine learning techniques used in predictive analysis include:
 - Regression models
 - Support vector machines
-- and Deep learning convolutional neural networks
+- and Deep learning convolution neural networks

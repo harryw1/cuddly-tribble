@@ -15,6 +15,7 @@
 # IDE and editor files
 .vscode/
 .idea/
+.zed/
 *.sublime-project
 *.sublime-workspace
 
@@ -36,9 +37,3 @@ yarn-error.log*
 # Cache directories
 .cache/
 .npm/
-
-# Optional: Uncomment if you're using TypeScript
-# *.tsbuildinfo
-
-# Optional: Uncomment if you're using Sass
-# .sass-cache/

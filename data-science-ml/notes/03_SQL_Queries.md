@@ -83,3 +83,139 @@ WHERE imdb_rating IS NULL;
 ```
 
 This query selects all records where the `imdb_rating` column has a `NULL` value.
+
+## `BETWEEN` Operator
+
+The `BETWEEN` operator selects values within a given range. The values can be numbers, text, or dates. For example:
+
+```sql
+SELECT *
+FROM movies
+WHERE imdb_rating BETWEEN 7 AND 9;
+```
+
+This query selects all records where the `imdb_rating` column has a value between 7 and 9.
+
+When dealing with text values, the `BETWEEN` operator is case-sensitive and searches for values alphabetically. For example:
+
+```sql
+SELECT *
+FROM movies
+WHERE name BETWEEN 'A' AND 'J';
+```
+
+Note that the starting value is inclusive and the ending value is exclusive. That means this query will select all records where the `name` column has a value that starts with `A` and will do that same for all values up to and including `I`. Some odd behavior here: if we had a movie that was named 'J', our query would return that record as well. This is because `BETWEEN` _goes up to_ the second value.
+
+## `AND` Operator
+
+We've seen the `AND` operator in the `BETWEEN` operator example above. The `AND` operator is used to filter records based on more than one condition. The `AND` operator displays a record if all the conditions separated by `AND` are `TRUE`. For example:
+
+```sql
+SELECT *
+FROM movies
+WHERE imdb_rating > 7
+    AND genre = 'Action';
+```
+
+This query selects all records where the `imdb_rating` column has a value greater than 7 and the `genre` column has a value of `Action`.
+
+Another example:
+
+```sql
+SELECT *
+FROM movies
+WHERE year BETWEEN 1970 AND 1979
+    AND imdb_rating > 8;
+```
+
+We could write SQL all on one line, but just like we separate lines with returns to make our code more readable, we can do the same with indentation.
+
+## `OR` Operator
+
+Like the `AND` operator, `OR` allows us to combine multiple conditions. The difference with `OR` is that this operator will return a record if _any_ of the conditions we've set return true.
+
+```sql
+SELECT *
+FROM movies
+WHERE year > 2014
+   OR genre = 'action';
+```
+
+## `ORDER BY` Clause
+
+The `ORDER BY` clause is used to sort the result-set in ascending or descending order. The `ORDER BY` clause sorts the records in ascending order by default. To sort the records in descending order, you can use the `DESC` keyword. For example:
+
+```sql
+SELECT *
+FROM movies
+ORDER BY name;
+```
+
+or:
+
+```sql
+SELECT *
+FROM movies
+ORDER BY name DESC;
+```
+
+`ORDER BY` is always used after `WHERE` when `WHERE` is used. If you don't use `WHERE`, you can use `ORDER BY` at the end of your query.
+
+## `LIMIT` Clause
+
+The `LIMIT` clause is used to specify the number of records to return. The `LIMIT` clause is used in the `SELECT` statement and is helpful when working with large datasets. We may want to only return a few records to get a sense of the data. For example:
+
+```sql
+SELECT *
+FROM movies
+LIMIT 5;
+```
+
+`LIMIT` is always used at the end of the query and is not available in all SQL databases (since we are working in SQLite, we have this clause available).
+
+```sql
+select *
+from movies
+order by imdb_rating desc
+limit 3;
+```
+
+## `CASE` Statement
+
+`CASE` statements are SQL's way of handling if-then logic. We are typically using case in a `SELECT` statement to return outputs under different conditions.
+
+```sql
+SELECT name,
+    CASE
+        WHEN imdb_rating > 8 THEN 'Fantastic'
+        WHEN imdb_rating > 6 THEN 'Poorly Received'
+        ELSE 'Avoid at All Costs'
+    END AS 'Review'
+FROM movies;
+```
+
+Note that in the above statement, we can also use an alias to return the result with a human-readable name.
+
+Here's a fun little error:
+
+```sql
+SELECT name
+    CASE
+        WHEN genre = 'romance' or genre = 'comedy' THEN 'Chill'
+        ELSE 'Intense'
+    END AS 'Mood'
+FROM movies;
+```
+
+The above doesn't work because we forgot a comma after `name`. This is a common error when writing SQL queries.
+
+Fixed:
+
+```sql
+SELECT name,
+    CASE
+        WHEN genre = 'romance' or genre = 'comedy' THEN 'Chill'
+        ELSE 'Intense'
+    END AS 'Mood'
+FROM movies;
+```

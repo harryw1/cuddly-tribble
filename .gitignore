@@ -16,6 +16,8 @@
 .vscode/
 .idea/
 .zed/
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
 *.sublime-project
 *.sublime-workspace
 

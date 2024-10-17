@@ -1,53 +1,30 @@
-# Full Stack Development Learning Repository
-
-This repository contains various projects, exercises, and notes from my journey learning full stack development through Codecademy and other resources.
+# Learning Journey
+This repository contains materials from two Codeacademy courses
+that I started:
+1. `full-stack-course`
+2. `data-science-ml`
 
 ## Structure
+- `/data-science-ml`: Contains subfolders for projects, modules,
+and other files associated with this course 
+  - `/notes`: Contains `.md` files for any notes taken as part
+  of the lessons
+  - `/projects`
+    - `/sql`: SQL related projects and exercises
+    - `/python`: Python related projects and exercises
+- `/full-stack-course`: Contains subfolders for projects, modules, 
+and other files associated with this course
+  - `/mdnotes`: Notes for the modules and lessons
+  - `/portfolio-projects`: Bigger, end-of-module projects
+  - `/html-and-css`: For the HTML and CSS portion of the course
+  - `/js-scripts`: For the JavaScript portion of the course
 
-- `/full-stack-course`: Contains subfolders for different topics and projects
-  - `/html-and-css`: HTML and CSS projects and exercises
-  - `/js-scripts`: JavaScript exercises and small projects
-  - `/mdnotes`: Markdown notes on various programming concepts
-  - `/portfolio-projects`: Larger portfolio projects
+## Goals
+My aim for this repository is to keep detailed record of my
+progress and serve as a place to reflect.
 
-- `/htmx`: Exploration of HTMX technology (currently empty)
-
-## Key Projects
-
-### HTML/CSS Projects
-- Broadway Design Project
-- Dasmoto's Arts & Crafts
-- Tea Cozy Project
-
-### JavaScript Projects
-- Credit Card Checker
-- Number Guesser Game
-- Rock Paper Scissors Game
-
-### Portfolio Project
-- Message Generator (Mad Libs style story generator)
-
-## Notes
-
-The `/mdnotes` folder contains markdown files with notes on various programming concepts, particularly focused on JavaScript.
-
-## Technologies Used
-
-- HTML
-- CSS
-- JavaScript
-- Markdown
-
-## Future Plans
-
-- Expand JavaScript projects
-- Explore backend technologies
-- Develop full-stack applications
-
-## Author
-
-Harrison Weiss
+Ultimately, I want to finish the Data Science and ML course to 
+make my job easier and progress in my career.
 
 ## License
-
-This project is open source and available under the [MIT License](LICENSE).
+This repository is open source and available under the [MIT License](https://github.com/harryw1/cuddly-tribble/blob/main/LICENSE). 

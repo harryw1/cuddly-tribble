@@ -1,6 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,zsh,venv
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,python,zsh,venv
 
+# Extras from me :)
+pyproject.toml
+uv.lock
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/

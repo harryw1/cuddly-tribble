@@ -239,4 +239,7 @@ zsdoc/data
 /tests/_output/*
 !/tests/_output/.gitkeep
 
+# DSstore
+.DS_Store
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,zsh,venv

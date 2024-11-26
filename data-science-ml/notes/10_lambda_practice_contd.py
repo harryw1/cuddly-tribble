@@ -31,3 +31,13 @@ orders["salutation"] = orders.apply(
     axis=1,
 )
 print(orders.head())
+
+seed_request = df[(df.location == "Brooklyn") & (df.product_type == "seeds")]
+
+combine_lambda = lambda row: \
+    '{} - {}'.format(row.product_type,
+                     row.product_description)
+
+inventory["full_description"] = inventory.apply(combine_lambda, axis=1)
+
+inventory["full_description"] = inventory.apply(lambda row: '{} - {}'.format(row.product_type, row.product_description), axis=1)

@@ -1,30 +1,69 @@
-# Learning Journey
-This repository contains materials from two Codeacademy courses
-that I started:
-1. `full-stack-course`
-2. `data-science-ml`
+# Learning Repository
 
-## Structure
-- `/data-science-ml`: Contains subfolders for projects, modules,
-and other files associated with this course 
-  - `/notes`: Contains `.md` files for any notes taken as part
-  of the lessons
-  - `/projects`
-    - `/sql`: SQL related projects and exercises
-    - `/python`: Python related projects and exercises
-- `/full-stack-course`: Contains subfolders for projects, modules, 
-and other files associated with this course
-  - `/mdnotes`: Notes for the modules and lessons
-  - `/portfolio-projects`: Bigger, end-of-module projects
-  - `/html-and-css`: For the HTML and CSS portion of the course
-  - `/js-scripts`: For the JavaScript portion of the course
+This repository contains materials from my learning journey through Codecademy courses, including Full Stack Development and Data Science/Machine Learning tracks.
+
+## Repository Structure
+
+### Data Science & Machine Learning (`data-science-ml/`)
+- **Notes**: Detailed markdown and py files covering various topics including:
+  - Data Science Basics
+  - SQL Foundations & Queries
+  - Python Fundamentals
+  - Pandas Introduction
+  - numpy/pandas
+- **Practice**:
+  - Python exercises
+  - SQL queries
+  - Jupyter notebooks
+  - Various coding challenges
+
+### Full Stack Development (`full-stack-course/`)
+- **HTML & CSS Projects**:
+  - Broadway Design
+  - Dasmoto Arts
+  - Tea Cozy
+  - Davies Burgers
+  - And more...
+- **JavaScript Scripts**:
+  - Credit Card Checker
+  - DOM Practice
+  - Rock Paper Scissors
+  - School Catalogue
+  - Various coding challenges
+- **Portfolio Projects**:
+  - Piano Player
+  - Message Generator
+- **Notes**: MD files covering various web development concepts
+
+## Course Progress
+
+1. Currently working through both tracks simultaneously
+2. Completed various projects and exercises
+3. Building practical skills through hands-on coding
+
+## Topics Covered
+
+### Data Science Track
+- SQL basics and advanced queries
+- Python programming
+- Data analysis fundamentals
+- Pandas and NumPy libraries
+- Statistical concepts
+
+### Full Stack Track
+- HTML5 & CSS3
+- JavaScript fundamentals
+- DOM manipulation
+- Responsive design
+- Interactive web applications
 
 ## Goals
-My aim for this repository is to keep detailed record of my
-progress and serve as a place to reflect.
 
-Ultimately, I want to finish the Data Science and ML course to 
-make my job easier and progress in my career.
+- Complete both courses thoroughly
+- Build a strong foundation in both data science and web development
+- Create practical projects to demonstrate skills
+- Document learning progress
 
 ## License
-This repository is open source and available under the [MIT License](https://github.com/harryw1/cuddly-tribble/blob/main/LICENSE). 
+
+This project is open source and available under the [MIT License](https://github.com/harryw1/cuddly-tribble/blob/main/LICENSE).

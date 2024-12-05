@@ -1,81 +1,59 @@
 import csv
 
 
-def diff_safety(list_items):
-    diff_safety = True
-    for i in range(len(list_items) - 1):
-        var1 = int(list_items[i])
-        var2 = int(list_items[i + 1])
-        num_diff = abs(var1 - var2)
-        if num_diff >= 1 and num_diff <= 3:
-            continue
-        else:
-            return not diff_safety
-    return diff_safety
-
-
-def more_less_safety(list_items):
-    more_less_safety = True
-    decrement_or_increment = (
-        "Decrease"  # Default is a decrement, or 0, increment is 1
-    )
-    print(f"List of items {list_items}")
-    init_compare_1 = int(list_items[0])
-    init_compare_2 = int(list_items[1])
-    if init_compare_1 > init_compare_2:
-        pass
-    if init_compare_1 < init_compare_2:
-        decrement_or_increment = "Increase"
-
-    for k in range(len(list_items) - 1):
-        var1 = int(list_items[k])
-        var2 = int(list_items[k + 1])
-        if decrement_or_increment == "Decrease" and (var2 > var1):
-            return not more_less_safety
-        if decrement_or_increment == "Increase" and (var2 < var1):
-            return not more_less_safety
-
-    return more_less_safety
-
-
-def slice_except_one(list_items):
-    safety = True
-    temp_row = []
-    for i in range(len(list_items)):
-        temp_safety = True
-        temp_row.append(list_items[:i] + list_items[i + 1 :])
-        temp_safety = diff_safety(temp_row)
-        if not temp_safety:
-            return False
-        temp_safety = more_less_safety(temp_row)
-        if not temp_safety:
-            return False
-    return safety
-
-
-def check_safety(list_items):
-    check_1 = diff_safety(list_items)
-    if not check_1:
-        check_1 = slice_except_one(list_items)
-    check_2 = more_less_safety(list_items)
-    if not check_2:
-        check_2 = slice_except_one(list_items)
-
-    if check_1 and check_2:
+def check_diff_and_order(list_items):
+    """Check if list has differences <= 3 and is strictly increasing or decreasing"""
+    if len(list_items) <= 1:
         return True
-    else:
-        return False
+
+    # Determine if sequence should be increasing or decreasing
+    is_increasing = list_items[1] > list_items[0]
+
+    for i in range(len(list_items) - 1):
+        curr, next_val = list_items[i], list_items[i + 1]
+        diff = abs(next_val - curr)
+
+        # Check if difference is more than 3
+        if diff > 3:
+            return False
+
+        # Check if order is maintained
+        if is_increasing and next_val <= curr:
+            return False
+        if not is_increasing and next_val >= curr:
+            return False
+
+    return True
 
 
+def try_removing_one(list_items):
+    """Try removing one item to make the list safe"""
+    for i in range(len(list_items)):
+        # Create new list without item at index i
+        new_list = list_items[:i] + list_items[i + 1 :]
+        if check_diff_and_order(new_list):
+            return True
+    return False
+
+
+def is_list_safe(list_items):
+    """Main function to check if list is safe or can be made safe by removing one item"""
+    # First check if list is already safe
+    if check_diff_and_order(list_items):
+        return True
+
+    # If not safe, try removing one item
+    return try_removing_one(list_items)
+
+
+# Read and process input
 with open("input.csv", "r") as input_file:
     input_text = csv.reader(input_file, delimiter=" ")
     counter = 0
     for row in input_text:
-        temp_row = []
-        for item in row:
-            temp_row.append(int(item))
-        if check_safety(temp_row):
+        temp_row = [int(item) for item in row]
+        if is_list_safe(temp_row):
             counter += 1
-            print(temp_row, check_safety(temp_row))
+            print(f"Safe list found: {temp_row}")
 
     print(f"Number of safe reports: {counter}")

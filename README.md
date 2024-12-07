@@ -63,7 +63,3 @@ This repository contains materials from my learning journey through Codecademy c
 - Build a strong foundation in both data science and web development
 - Create practical projects to demonstrate skills
 - Document learning progress
-
-## License
-
-This project is open source and available under the [MIT License](https://github.com/harryw1/cuddly-tribble/blob/main/LICENSE).

@@ -13,22 +13,22 @@ After this course, you will be able to:
 
 1. Identify different variable types
 2. Determine what kinds of analysis are appropriate based
-on the variable type
+   on the variable type
 3. Summarize a single variable
 4. Summarize the relationship between two variables
 5. Inspect and clean a dataset.
 
 ## What is EDA?
 
-*Exploratory Data Analysis* or EDA, is about exploring the
+_Exploratory Data Analysis_ or EDA, is about exploring the
 dataset and determining things like:
 
 - data structure, layout, and coding,
 - summarzing and visualizing data,
 - detecting ouliers, missing data, or other
-issues with the data set and how to address them,
+  issues with the data set and how to address them,
 - and finding avenues for further research and model building
-and analysis.
+  and analysis.
 
 ## Techniques
 
@@ -67,5 +67,3 @@ dataset.
 We can also use other functions to create things like
 histograms, scatterplots, and other visual representations
 of the relationships between the data points.
-
-

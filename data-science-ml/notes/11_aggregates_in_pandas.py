@@ -3,8 +3,8 @@
 # within a dataframe.
 
 # %% Dataframe creation
-import pandas as pd
 import numpy as np
+import pandas as pd
 
 data = {
     "Product": ["Widget", "Gadget", "Widget", "Doohickey", "Gadget", "Widget"],
@@ -53,7 +53,11 @@ print(grouped_example)
 # %% Multiple columns with lambda and groups
 # The result of the following code is a dataframe
 # with the 25th percentile of sales for each product.
-result = df.groupby("Product").Sales.apply(lambda x: np.percentile(x, 25)).reset_index()
+result = (
+    df.groupby("Product")
+    .Sales.apply(lambda x: np.percentile(x, 25))
+    .reset_index()
+)
 print(result)
 
 # %% Groupby with multiple columns

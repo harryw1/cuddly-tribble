@@ -1,21 +1,20 @@
 # Learning Repository
 
-This repository contains materials from my learning journey through Codecademy courses, including Full Stack Development and Data Science/Machine Learning tracks.
+This repository contains materials from my learning journey through Codecademy courses,
+including Full Stack Development and Data Science/Machine Learning tracks.
 
 ## Repository Structure
 
 ### Data Science & Machine Learning (`data-science-ml/`)
-- **Notes**: Detailed markdown and py files covering various topics including:
+- **Notes** (`notes/`): Detailed `markdown`, `py`, and `ipynb` files covering various topics including:
   - Data Science Basics
   - SQL Foundations & Queries
   - Python Fundamentals
   - Pandas Introduction
   - numpy/pandas
-- **Practice**:
-  - Python exercises
-  - SQL queries
-  - Jupyter notebooks
-  - Various coding challenges
+- **Practice** (`practice/`): Files and exercises covering:
+  - Python exercises (`jupyter/`)
+  - SQL queries (`sql/`)
 
 ### Full Stack Development (`full-stack-course/`)
 - **HTML & CSS Projects**:
@@ -59,7 +58,7 @@ This repository contains materials from my learning journey through Codecademy c
 
 ## Goals
 
-- Complete both courses thoroughly
-- Build a strong foundation in both data science and web development
+- Build a strong foundation in both data science and machine learning to solve real-world problems in
+sustainability science and environmental science
 - Create practical projects to demonstrate skills
 - Document learning progress

@@ -36,9 +36,11 @@ including Full Stack Development and Data Science/Machine Learning tracks.
 
 ## Course Progress
 
-1. Currently working through both tracks simultaneously
-2. Completed various projects and exercises
-3. Building practical skills through hands-on coding
+Since data science and machine learning are more relevant to the work I
+conduct in my day to day job, I have stopped progress on the Full Stack
+Development track to focus on the Data Science and Machine Learning track.
+I am currently ~35% through the Data Science track and intend to complete
+the course by early- to mid-2025.
 
 ## Topics Covered
 

@@ -4,6 +4,7 @@
 # Extras from me :)
 pyproject.toml
 uv.lock
+*.db
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

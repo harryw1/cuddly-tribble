@@ -112,3 +112,13 @@ and the Chi-Square statistic.
 > [!note] Chi-Square
 > Dr. Wiener would argue that the chi-square statistic is a weak test
 and that it is a last resort.
+
+## Example of Overlapping Histogram Setup
+
+```python
+    #create the overlapping histograms here:
+    plt.hist(scores_urban, color="blue", label="Urban", normed=True, alpha=0.5)
+    plt.hist(scores_rural, color="red", label="Rural", normed=True, alpha=0.5)
+    plt.legend()
+    plt.show()
+```

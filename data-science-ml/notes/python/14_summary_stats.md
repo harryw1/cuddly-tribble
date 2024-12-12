@@ -136,3 +136,10 @@ print(corr_sleep_performance)
 influence_leader_freq = pd.crosstab(npi.influence, npi.leader)
 print(influence_leader_freq)
 ```
+
+Viewing that same data as proportions:
+
+```python
+special_authority_prop = special_authority_freq/len(npi)
+print(special_authority_prop)
+```

@@ -143,3 +143,59 @@ Viewing that same data as proportions:
 special_authority_prop = special_authority_freq/len(npi)
 print(special_authority_prop)
 ```
+
+## Marginal Proportions
+
+Marginal proportions are the proportions of each category in a single
+variable. They are useful for understanding the distribution of a single
+variable.
+
+```code
+leader           no       yes
+influence
+no         0.271695  0.116518
+yes        0.212670  0.399117
+```
+We might notice that the bottom row, which corresponds to people who
+think they have a talent for influencing people, accounts for
+0.213 + 0.399 = 0.612 (or 61.2%) of surveyed people — more than half!
+This means that we can expect higher proportions in the bottom row,
+regardless of whether the questions are associated.
+
+
+The proportion of respondents in each category of a single question is
+called a marginal proportion. For example, the marginal proportion of
+the population that has a talent for influencing people is 0.612. We can
+calculate all the marginal proportions from the contingency table of
+proportions (saved as influence_leader_prop) using row and column sums
+as follows:
+
+```python
+leader_marginals = influence_leader_prop.sum(axis=0)
+print(leader_marginals)
+influence_marginals =  influence_leader_prop.sum(axis=1)
+print(influence_marginals)
+```
+
+### Example of Marginal Proportions
+
+```python
+import pandas as pd
+import numpy as np
+
+npi = pd.read_csv("npi_sample.csv")
+
+# save the table of frequencies as special_authority_freq:
+special_authority_freq = pd.crosstab(npi.special, npi.authority)
+
+# save the table of proportions as special_authority_prop:
+special_authority_prop = special_authority_freq/len(npi)
+
+# calculate and print authority_marginals
+authority_marginals = special_authority_prop.sum(axis=0)
+print(authority_marginals)
+
+# calculate and print special_marginals
+special_marginals = special_authority_prop.sum(axis=1)
+print(special_marginals)
+```

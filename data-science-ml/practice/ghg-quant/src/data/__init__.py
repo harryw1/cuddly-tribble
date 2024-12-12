@@ -2,6 +2,6 @@
 """Data processing and cleaning functionality."""
 
 from .ingestion import DataIngestion
-from .preprocess import clean_data, validate_data
+from .validation import GHGDataValidator
 
-__all__ = ["DataIngestion"]
+__all__ = ["DataIngestion", "GHGDataValidator"]

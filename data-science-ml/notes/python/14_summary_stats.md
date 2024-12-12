@@ -109,16 +109,30 @@ relationship between `transmission` and `seller_type`, both of which are
 categorical. We can explore this relationship using a contingency table
 and the Chi-Square statistic.
 
-> [!note] Chi-Square
+> [!note]
 > Dr. Wiener would argue that the chi-square statistic is a weak test
 and that it is a last resort.
 
 ## Example of Overlapping Histogram Setup
 
 ```python
-    #create the overlapping histograms here:
-    plt.hist(scores_urban, color="blue", label="Urban", normed=True, alpha=0.5)
-    plt.hist(scores_rural, color="red", label="Rural", normed=True, alpha=0.5)
-    plt.legend()
-    plt.show()
+#create the overlapping histograms here:
+plt.hist(scores_urban, color="blue", label="Urban", normed=True, alpha=0.5)
+plt.hist(scores_rural, color="red", label="Rural", normed=True, alpha=0.5)
+plt.legend()
+plt.show()
+```
+
+## Example of Pearson Correlation
+
+```python
+corr_sleep_performance, p = pearsonr(sleep.hours_sleep, sleep.performance)
+print(corr_sleep_performance)
+```
+
+## Example of Contingency Tables: Frequencies
+
+```python
+influence_leader_freq = pd.crosstab(npi.influence, npi.leader)
+print(influence_leader_freq)
 ```

@@ -104,45 +104,58 @@ sns.catplot(
 
 # %% Sort missing data
 # Sort by ID and Year so that each person's data is carried backwards correctly
-df = df.sort_values(['RespondentID','Year'])
+df = df.sort_values(["RespondentID", "Year"])
 
-df['UndergradMajor'].bfill(axis=0, inplace=True)
+df["UndergradMajor"].bfill(axis=0, inplace=True)
 
 # %% Visualize education data
 # Key major groups outlined in the Stack Overflow survey
-majors = ['social science','natural science','computer science','development','another engineering','never declared']
+majors = [
+    "social science",
+    "natural science",
+    "computer science",
+    "development",
+    "another engineering",
+    "never declared",
+]
 
-edudf = df[['Year','UndergradMajor']]
-edudf.dropna(how='any', inplace=True)
-edudf.loc[edudf['UndergradMajor'].str.contains('(?i)social science'), 'SocialScience'] = True
-edudf.loc[edudf['UndergradMajor'].str.contains('(?i)natural science'), 'NaturalScience'] = True
-edudf.loc[edudf['UndergradMajor'].str.contains('(?i)computer science'), 'ComSci'] = True
-edudf.loc[edudf['UndergradMajor'].str.contains('(?i)development'), 'ComSci'] = True
-edudf.loc[edudf['UndergradMajor'].str.contains('(?i)another engineering'), 'OtherEng'] = True
-edudf.loc[edudf['UndergradMajor'].str.contains('(?i)never declared'), 'NoMajor'] = True
+edudf = df[["Year", "UndergradMajor"]]
+edudf.dropna(how="any", inplace=True)
+edudf.loc[
+    edudf["UndergradMajor"].str.contains("(?i)social science"), "SocialScience"
+] = True
+edudf.loc[
+    edudf["UndergradMajor"].str.contains("(?i)natural science"), "NaturalScience"
+] = True
+edudf.loc[edudf["UndergradMajor"].str.contains("(?i)computer science"), "ComSci"] = True
+edudf.loc[edudf["UndergradMajor"].str.contains("(?i)development"), "ComSci"] = True
+edudf.loc[
+    edudf["UndergradMajor"].str.contains("(?i)another engineering"), "OtherEng"
+] = True
+edudf.loc[edudf["UndergradMajor"].str.contains("(?i)never declared"), "NoMajor"] = True
 
-edudf = edudf.melt(id_vars=['Year'], 
-    value_vars=['SocialScience','NaturalScience','ComSci','OtherEng','NoMajor'], 
-    var_name='EduCat',
-    value_name='EduFlag')
+edudf = edudf.melt(
+    id_vars=["Year"],
+    value_vars=["SocialScience", "NaturalScience", "ComSci", "OtherEng", "NoMajor"],
+    var_name="EduCat",
+    value_name="EduFlag",
+)
 
-edudf.dropna(how='any', inplace=True)
-edudf = edudf.groupby(['Year','EduCat']).count().reset_index()
+edudf.dropna(how="any", inplace=True)
+edudf = edudf.groupby(["Year", "EduCat"]).count().reset_index()
 
-eduFig = sns.catplot(x="Year", y='EduFlag', col="EduCat",
-                data=edudf, kind="bar",
-                height=6, aspect=1.5)
+eduFig = sns.catplot(
+    x="Year", y="EduFlag", col="EduCat", data=edudf, kind="bar", height=6, aspect=1.5
+)
 
 # %% Experience data verus salary
-compFields = df[['Year','YearsCodePro','ConvertedComp']]
+compFields = df[["Year", "YearsCodePro", "ConvertedComp"]]
 
-D = sns.boxplot(x="Year", y="YearsCodePro",
-            data=compFields)
+D = sns.boxplot(x="Year", y="YearsCodePro", data=compFields)
 plt.show()
 plt.clf()
 
-E = sns.boxplot(x="Year", y="ConvertedComp",
-            data=compFields)
+E = sns.boxplot(x="Year", y="ConvertedComp", data=compFields)
 plt.show()
 plt.clf()
 
@@ -153,7 +166,7 @@ from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import IterativeImputer
 from sklearn.model_selection import train_test_split
 
-imputedf = df[['YearsCodePro','ConvertedComp']]
+imputedf = df[["YearsCodePro", "ConvertedComp"]]
 
 traindf, testdf = train_test_split(imputedf, train_size=0.1)
 
@@ -164,10 +177,11 @@ imp = IterativeImputer(max_iter=20, random_state=0)
 imp.fit(imputedf)
 
 # Transform the model on the entire dataset
-compdf = pd.DataFrame(np.round(imp.transform(imputedf),0), columns=['YearsCodePro','ConvertedComp'])
+compdf = pd.DataFrame(
+    np.round(imp.transform(imputedf), 0), columns=["YearsCodePro", "ConvertedComp"]
+)
 # %% Visualize the imputed data
-compPlotdf = compdf.loc[compdf['ConvertedComp'] <= 150000]
-compPlotdf['CodeYearBins'] = pd.qcut(compPlotdf['YearsCodePro'], q=5)
+compPlotdf = compdf.loc[compdf["ConvertedComp"] <= 150000]
+compPlotdf["CodeYearBins"] = pd.qcut(compPlotdf["YearsCodePro"], q=5)
 
-sns.boxplot(x="CodeYearBins", y="ConvertedComp",
-            data=compPlotdf)
+sns.boxplot(x="CodeYearBins", y="ConvertedComp", data=compPlotdf)

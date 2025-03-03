@@ -1,7 +1,8 @@
-import numpy as np
-import codecademylib3
-from math import sin, cos, log, pi
+# import codecademylib3
+from math import sin, log
+
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def limit_derivative(f, x, h):
@@ -34,7 +35,6 @@ def f3(x):
 print(limit_derivative(f3, 1, 2))
 print(limit_derivative(f3, 1, 0.1))
 print(limit_derivative(f3, 1, 0.00001))
-
 
 # Graph the true derivative
 x_vals = np.linspace(1, 10, 200)

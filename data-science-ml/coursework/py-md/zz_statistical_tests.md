@@ -1,8 +1,12 @@
 # Statistical Tests in Python
 
-This document outlines several statistical tests, their applications, and Python implementations using libraries like `scipy.stats` and `statsmodels`.  Note that the examples provided are simplified and may require adjustments based on specific datasets and research questions.  It is crucial to consult statistical literature and potentially a statistician for complex analyses.
+This document outlines several statistical tests, their applications, and Python implementations using libraries like
+`scipy.stats` and `statsmodels`. Note that the examples provided are simplified and may require adjustments based on
+specific datasets and research questions. It is crucial to consult statistical literature and potentially a statistician
+for complex analyses.
 
-This information is current as of the above date.  Statistical methods and software packages are constantly evolving, so it's essential to verify the latest best practices.
+This information is current as of the above date. Statistical methods and software packages are constantly evolving, so
+it's essential to verify the latest best practices.
 
 ## T-tests
 
@@ -11,7 +15,8 @@ This information is current as of the above date.  Statistical methods and softw
   * **Independent samples t-test:**  For comparing means of two independent groups (e.g., treatment vs. control).
   * **Paired samples t-test:** For comparing means of two related groups (e.g., pre-test vs. post-test scores).
   * **One-sample t-test:** For comparing the mean of a sample to a known population mean.
-* **Assumptions:**  Data should be approximately normally distributed, especially with smaller sample sizes.  Independent samples t-test assumes equal variances between groups (unless Welch's t-test is used).
+* **Assumptions:**  Data should be approximately normally distributed, especially with smaller sample sizes. Independent
+  samples t-test assumes equal variances between groups (unless Welch's t-test is used).
 * **Python Example (Independent samples t-test):**
 
 ```python
@@ -31,7 +36,8 @@ print(f"P-value: {p_value:.3f}")
 * **Types:**
   * **One-way ANOVA:** One independent variable with three or more levels.
   * **Two-way ANOVA:** Two or more independent variables.
-* **Assumptions:**  Data should be approximately normally distributed within each group.  Homogeneity of variances across groups.
+* **Assumptions:**  Data should be approximately normally distributed within each group. Homogeneity of variances across
+  groups.
 * **Python Example (One-way ANOVA):**
 
 ```python
@@ -39,6 +45,7 @@ import statsmodels.formula.api as sm
 
 data = {'group': ['A', 'A', 'B', 'B', 'C', 'C'], 'value': [1, 2, 3, 4, 5, 6]}
 import pandas as pd
+
 df = pd.DataFrame(data)
 
 model = sm.ols('value ~ C(group)', data=df).fit()
@@ -87,7 +94,8 @@ print(f"P-value: {p_value:.3f}")
 
 * **Purpose:** Model the relationship between a dependent variable and one or more independent variables.
 * **Types:** Linear regression, multiple regression, logistic regression.
-* **Assumptions:** Linear regression assumes linearity, independence of errors, constant variance of errors (homoscedasticity), and normality of errors.
+* **Assumptions:** Linear regression assumes linearity, independence of errors, constant variance of errors (
+  homoscedasticity), and normality of errors.
 * **Python Example (Linear Regression):**
 
 ```python

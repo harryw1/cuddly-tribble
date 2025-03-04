@@ -6,6 +6,7 @@ pyproject.toml
 uv.lock
 *.db
 requirements.txt
+.idea
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

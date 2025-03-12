@@ -8,5 +8,3 @@ df = pd.read_csv(
     )
 
 print(df.head())
-
-
